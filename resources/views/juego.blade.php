@@ -9,7 +9,9 @@
   </head>
   <body>
      <section class="col-12 d-flex flex-column flex-wrap">
+
              <div class="w-100 d-flex p-2 ">
+
                      <div class="w-100 border p-4 d-flex flex-row shadow-lg rounded-4 justify-content-between bg-success">
                           <div class="w-25 d-flex justify-content-center">
                               <section class="w-25 d-flex flex-column align-items-center text-break justify-content-center">
@@ -65,7 +67,62 @@
                <div class="w-100 d-flex ">
                 <p></p>
             </div>
-                        <article class="col-2 border p-2 border-5 rounded-4 shadow-lg h-100" >
+            <div id="zonasDeSoltar" class="col-12 d-flex justify-content-center flex-row">
+                <div class="zona-de-soltar" style="width: 200px;" value=""></div>
+               <div class="zona-de-soltar col"  value="">a</div>
+               <div class="zona-de-soltar col"  value="">a</div>
+               <div class="zona-de-soltar col"  value="">a</div>
+               <div class="zona-de-soltar col"  value="">a</div>
+               </div>
+
+               <div class="card p-2 shadow-lg" style="width: 20rem;" draggable="true">
+                <h5 class="card-title">Carta de {{$player_card[0][0]}}</h5>
+                <p>{{$player_card[0][1][0]->carta}}</p>
+                <img src="{{$player_card[0][1][0]->img_carta}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{$player_card[0][1][0]->modelo}}</h5>
+                  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="" style="font-size:8pt ">
+                    <option selected>Seleccione la opcion a comparar</option>
+                    <option value="1" class="">
+                    <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                        <p>Cilingraje:</p>
+                        <p>{{$player_card[0][1][0]->cilindraje}} cc</p>
+                    </div>
+                    </option>
+                    <option value="2">
+                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                            <p>cilindros :</p>
+                            <p>{{$player_card[0][1][0]->cilindros}} cc</p>
+                        </div>
+                    </option>
+                    <option value="3">
+                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                            <p>Potencias:</p>
+                            <p>{{$player_card[0][1][0]->potencia}}cc</p>
+                        </div>
+                    </option>
+
+                    <option value="3">
+                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                            <p>revoluciones:</p>
+                            <p>{{$player_card[0][1][0]->revoluciones}}cc</p>
+                        </div>
+                    </option>
+
+                    <option value="3">
+                        <div class="w-100 d-flex justify-content-between flex-wrap flex-row">
+                            <p>peso:</p>
+                            <p>{{$player_card[0][1][0]->peso}}cc</p>
+                        </div>
+                    </option>
+
+
+                </select>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+                        <article draggable="true" class="col-2 w-25 border p-2 border-5 rounded-4 shadow-lg h-100" >
+                          
                             <p class="d-flex text-dark">Carta de {{$player_card[0][0]}}</p>
                             
                             <div class="w-100 d-flex ">
@@ -120,7 +177,7 @@
 
 
                         
-                        <article class="col-2 border p-2 border-5 rounded-4 shadow-lg h-100" >
+                        <article  draggable="true" class="col-2 border p-2 border-5 rounded-4 shadow-lg h-100" >
                             
                             <p class="d-flex text-dark">Carta de {{$player_card[1][0]}}</p>
 
@@ -175,7 +232,7 @@
                         </article>
                {{-- @endforeach --}}
 
-               <article class="col-2 border p-2 border-5 rounded-4 shadow-lg h-100" >
+               <article  draggable="true" class="col-2 border p-2 border-5 rounded-4 shadow-lg h-100" >
                             
                 <p class="d-flex text-dark">Carta de {{$player_card[2][0]}}</p>
 
@@ -230,7 +287,7 @@
             </article>
 
 
-            <article class="col-2 border p-2 border-5 rounded-4 shadow-lg h-100" >
+            <article  draggable="true" class="col-2 border p-2 border-5 rounded-4 shadow-lg h-100" >
                             
                 <p class="d-flex text-dark">Carta de {{$player_card[3][0]}}</p>
 
